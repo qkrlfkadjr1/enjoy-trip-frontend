@@ -4,7 +4,7 @@ import { RouterView, RouterLink } from "vue-router"
 </script>
 
 <template>
-  <Layout>
+  <Layout title="마이페이지">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
