@@ -1,11 +1,15 @@
 import axios from "axios";
 
 const local = axios.create({
-  baseURL: "http://localhost/users",
+  baseURL: "http://localhost",
+  headers: {
+    "Content-Type": "application/json;charset=utf-8",
+  },
 });
 
 function signup(user, success, fail) {
-  local.post(``, JSON.stringify(user)).then(success).catch(fail);
+  console.log(user.value);
+  local.post(`/users`, JSON.stringify(user.value)).then(success).catch(fail);
 }
 
 export {
