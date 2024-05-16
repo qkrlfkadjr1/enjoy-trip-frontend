@@ -17,11 +17,11 @@ const jsConfetti = new JSConfetti()
 const sidos = ref([]);
 const guguns = ref([]);
 const user = ref({
-    userId: "",
-    userName: "",
-    userPassword: "",
-    emailId: "",
-    emailDomain: "",
+    userId: null,
+    userName: null,
+    userPassword: null,
+    emailId: null,
+    emailDomain: null,
     sidoCode: "",
     gugunCode: "",
 });
@@ -48,6 +48,7 @@ onMounted(() => {
         },
         (error) => {
             console.error("Error fetching attractions:", error);
+            return;
         }
     );
 });
