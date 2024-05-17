@@ -1,12 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 
-
 //example components
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";
 import Header from "../../examples/Header.vue";
-
 
 //토글
 import PresentationExample from "./Sections/PresentationExample.vue";
@@ -43,18 +41,37 @@ const modules = [Autoplay, Pagination, Navigation, Parallax];
     </div>
   </div>
   <Header>
-    <swiper :spaceBetween="0" :centeredSlides="true" :autoplay="{
-      delay: 3000,
-      stopOnLastSlide: false,
-      disableOnInteraction: true,
-    }" speed="2500" loop="true" slidesPerView="auto" loopedSlides="5" observer="true" observeParents="true"
-      :modules="modules" class="mySwiper">
+    <swiper
+      :spaceBetween="0"
+      :centeredSlides="true"
+      :autoplay="{
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+      }"
+      :speed="2500"
+      :loop="true"
+      :slidesPerView="'auto'"
+      :loopedSlides="5"
+      :observer="true"
+      :observeParents="true"
+      :modules="modules"
+      class="mySwiper"
+    >
       <swiper-slide>
-        <div class="page-header min-vh-75" :style="{ backgroundImage: `url(${vueMkHeader})` }" loading="lazy">
+        <div
+          class="page-header min-vh-75"
+          :style="{ backgroundImage: `url(${vueMkHeader})` }"
+          loading="lazy"
+        >
           <div class="container">
             <div class="row">
               <div class="col-lg-7 text-center mx-auto position-relative">
-                <h1 class="text-white pt-3 mt-n5 me-2" :style="{ display: 'inline-block ' }" freeMode:false>
+                <h1
+                  class="text-white pt-3 mt-n5 me-2"
+                  :style="{ display: 'inline-block ' }"
+                  freeMode:false
+                >
                   Enjoy Trip!
                 </h1>
                 <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
@@ -66,9 +83,17 @@ const modules = [Autoplay, Pagination, Navigation, Parallax];
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="page-header min-vh-75" :style="{ backgroundImage: `url(${vueMkHeader2})` }" loading="lazy"></div>
-      </swiper-slide><swiper-slide>
-        <div class="page-header min-vh-75" :style="{ backgroundImage: `url(${vueMkHeader3})` }" loading="lazy"></div>
+        <div
+          class="page-header min-vh-75"
+          :style="{ backgroundImage: `url(${vueMkHeader2})` }"
+          loading="lazy"
+        ></div> </swiper-slide
+      ><swiper-slide>
+        <div
+          class="page-header min-vh-75"
+          :style="{ backgroundImage: `url(${vueMkHeader3})` }"
+          loading="lazy"
+        ></div>
       </swiper-slide>
     </swiper>
   </Header>
